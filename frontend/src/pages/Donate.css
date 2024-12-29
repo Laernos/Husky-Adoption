@@ -1,0 +1,187 @@
+/* src/pages/Donate.css */
+
+/* General Styles */
+.donate-page {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f3f4f6;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donate-page h1 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.intro-text {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 700px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Donation Form Styles */
+.donation-form {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.form-section h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+.form-section h2:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 40px;
+  height: 3px;
+  background: #007bff;
+  border-radius: 4px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+label input[type='text'],
+label input[type='email'],
+label input[type='number'],
+label input[type='tel'] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+label input[type='text']:focus,
+label input[type='email']:focus,
+label input[type='number']:focus,
+label input[type='tel']:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: #333;
+}
+
+.radio-label input,
+.checkbox-label input {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Preset Donation Amount Buttons */
+.preset-amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.preset-amounts button {
+  flex: 1 1 calc(25% - 10px);
+  padding: 15px 0;
+  background-color: #e0f0ff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #007bff;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.preset-amounts button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Feedback Message */
+.feedback-message {
+  font-size: 1em;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.feedback-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .preset-amounts button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .submit-button {
+    font-size: 1.2em;
+  }
+}
